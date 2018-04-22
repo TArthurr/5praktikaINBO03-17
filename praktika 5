@@ -1,0 +1,33 @@
+// Задача номер 1
+#include <iostream>
+using namespace std;
+
+void bubble_sort(int a[15])
+{
+for (int i = 0; i < 14; i++)
+	for (int j = i + 1; j < 15; j++)
+		if (a[j] < a[i]) swap(a[j], a[i]);
+}
+
+void bubble_sort(float a[15])
+{
+for (int i = 0; i < 14; i++)
+	for (int j = i + 1; j < 10; j++)
+		if (a[j] < a[i]) swap(a[j], a[i]);
+}
+
+int main()
+{
+	int a[15] = {1,4,6,8,0,12,25,34,14,11,46,38,56,83,22};
+	float b[15] = {0.4,5.2,3.3,7.5,6.1,4.33,12.2,5.35,6.03,11.44,8.09,67.45,43.2,21.8,77};
+	bubble_sort(a);
+	bubble_sort(b);
+		for (int j = 0; j < 15; j++)
+			printf("%i ", a[j]); // Целые числа после сортировки
+				printf("\n");
+		for (int j = 0; j < 15; j++)
+			printf("%.1f ", b[j]); // Дробные числа после сортировки
+				printf("\n");
+		system("pause");
+	return 0;
+}
